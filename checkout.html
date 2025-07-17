@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" >
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+    }
+    .checkout-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 40px;
+      gap: 40px;
+    }
+    .billing-section, .summary-section {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      flex: 1;
+      min-width: 320px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .place-order-btn {
+      background: #00B517;
+      color: #fff;
+      padding: 14px;
+      border: none;
+      width: 100%;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .summary-line {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 0;
+    }
+    .summary-total {
+      font-weight: bold;
+      font-size: 18px;
+      border-top: 1px solid #ccc;
+      padding-top: 10px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <section class="checkout-container">
+    <!-- Billing Info -->
+    <div class="billing-section">
+      <h2>Billing Information</h2>
+      <input type="text" placeholder="Full Name" required />
+      <input type="email" placeholder="Email" required />
+      <input type="tel" placeholder="Phone" required />
+      <textarea placeholder="Shipping Address" rows="4" required></textarea>
+
+      <h3>Payment Method</h3>
+      <label><input type="radio" name="payment" checked> Cash on Delivery</label><br>
+      <label><input type="radio" name="payment"> Credit/Debit Card</label>
+    </div>
+
+    <!-- Summary Info -->
+    <div class="summary-section">
+      <h2>Order Summary</h2>
+      <div class="summary-line">
+        <span>Subtotal</span><span>$93.90</span>
+      </div>
+      <div class="summary-line">
+        <span>Discount</span><span>‑$10.00</span>
+      </div>
+      <div class="summary-line">
+        <span>Tax</span><span>$2.00</span>
+      </div>
+      <div class="summary-total">
+        <span>Total</span><span>$85.90</span>
+      </div>
+
+      <!-- ✅ Go to Thank You Page -->
+      <button class="place-order-btn" onclick="window.location.href='thankyou.html'">Place Order</button>
+    </div>
+  </section>
+</body>
+</html>
+<script>
+    // ✅ MOBILE SIDEBAR TOGGLE
+  const toggleBtn = document.getElementById('menu-toggle');
+  const closeBtn = document.getElementById('close-btn');
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('overlay');
+
+  if (toggleBtn && sidebar && overlay && closeBtn) {
+    toggleBtn.addEventListener('click', () => {
+      sidebar.classList.add('active');
+      overlay.classList.add('active');
+      toggleBtn.style.display = 'none';
+    });
+
+    const closeSidebar = () => {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      toggleBtn.style.display = 'block';
+    };
+
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+  }
+</script>

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Top Navbar -->
+    <header class="top-navbar">
+    <div class="container section-p1">
+      <div class="logo">
+        <img src="logo-colored.png" alt="Brand Logo" height="40" />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search" />
+        <select>
+          <option>All category</option>
+          <option>Electronics</option>
+          <option>Mobile Accessories</option>
+          <option>Smart Phones</option>
+          <option>Modern Tech</option>
+        </select>
+        <button>Search</button>
+      </div>
+
+      <div class="top-links">
+        <a href="profile.html">Profile <i class="fa-solid fa-user"></i></a>
+        <a href="#">Message <i class="fa-solid fa-message"></i></a>
+        <a href="menuitem.html">Orders <i class="fa-solid fa-heart"></i></a>
+        <a href="cart.html">My Cart <i class="fa-solid fa-cart-shopping "></i></a>
+      </div>
+    </div>
+
+    <div class="bottom-bar container">
+      <nav class="menu ">
+        <a href="index.html">All category</a>
+        <a href="Hotoffers.html">Hot offers</a>
+        <a href="#">Gift boxes</a>
+        <a href="#">Projects</a>
+        <a href="menuitem.html">Menu item</a>
+        <a href="#">Help <img src="Vector.png" alt=""></a>
+      </nav>
+
+
+
+      <div class="locale-dropdown">
+        <div class="dropdown" id="languageDropdown">
+          <span class="dropdown-toggle">English, USD <img src="Vector.png" alt=""></span>
+          <ul class="dropdown-menu">
+            <li>English, USD</li>
+            <li>Spanish, EUR</li>
+            <li>French, EUR</li>
+            <li>Urdu, PKR</li>
+          </ul>
+        </div>
+
+        <div class="dropdown" id="countryDropdown">
+          <span class="dropdown-toggle">
+            Ship to <img class="img2" src="DE@2x.png" alt=""> <img src="Vector.png" alt="">
+          </span>
+          <ul class="dropdown-menu">
+            <li><img src="DE@2x.png" alt=""> Germany</li>
+            <li><img src="US@2x.png" alt=""> United States</li>
+            <li><img src="PK@2x.png" alt=""> Pakistan</li>
+            <li><img src="FR@2x.png" alt=""> France</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  <button id="menu-toggle" class="mobile-only">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+
+  <!-- Mobile Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <!-- Close Button -->
+    <button class="close-btn" id="close-btn">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="sidebar-header">
+      <div class="avatar">
+        <img src="Avatar.png" alt="User Avatar">
+      </div>
+      <a href="#"> Sign in | Register</a>
+    </div>
+
+
+   
+    <ul class="sidebar-menu">
+      <li><a href="index.html"><i class="fa-solid fa-house"></i> Home</a></li>
+      <li><a href="Hotoffers.html"><i class="fa-solid fa-list"></i> Categories</a></li>
+      <li><a href="menuitem.html"><i class="fa-solid fa-heart"></i> Favorites</a></li>
+      <li><a href="cart.html"><i class="fa-solid fa-box"></i> My Orders</a></li>
+      <li><a href="#"><i class="fa-solid fa-globe"></i> English | USD</a></li>
+      <li><a href="register.html"><i class="fa-solid fa-phone"></i> Contact Us</a></li>
+      <li><a href="#"><i class="fa-solid fa-circle-info"></i> About</a></li>
+    </ul>
+
+    <ul class="sidebar-footer">
+      <li><a href="#">User Agreement</a></li>
+      <li><a href="#">Partnership</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <div class="breadcrumb section-p1">Home > Clothings > Men's wear > Summer clothing</div>
+  <div class="container3 section-p1">
+    <aside>
+      <h4 class="toggle-heading">Category <i class="fas fa-chevron-up"></i></h4>
+      <p>Mobile accessory</p>
+      <p>Electronics</p>
+      <p>Smartphones</p>
+      <p>Modern tech</p>
+      <div class="see-all">See all</div>
+
+      <h4 class="toggle-heading">Brands <i class="fas fa-chevron-up"></i></h4>
+      <label><input type="checkbox" checked style="accent-color:#0D6EFD"> Samsung</label>
+      <label><input type="checkbox" checked style="accent-color:#0D6EFD"> Apple</label>
+      <label><input type="checkbox"> Huawei</label>
+      <label><input type="checkbox" checked style="accent-color:#0D6EFD"> Pocco</label>
+      <label><input type="checkbox"> Lenovo</label>
+      <div class="see-all">See all</div>
+
+      <h4 class="toggle-heading">Material <i class="fas fa-chevron-up"></i></h4>
+      <label><input type="checkbox"> Plastic</label>
+      <label><input type="checkbox"> Wood</label>
+      <label><input type="checkbox"> Leather</label>
+      <label><input type="checkbox"> Cotton</label>
+      <label><input type="checkbox"> Rubber</label>
+
+      <h4 class="toggle-heading">Features <i class="fas fa-chevron-up"></i></h4>
+      <label><input type="checkbox" checked style="accent-color:#0D6EFD"> Metallic</label>
+      <label><input type="checkbox"> Plastic cover</label>
+      <label><input type="checkbox"> 8GB Ram</label>
+      <label><input type="checkbox"> Super power</label>
+      <label><input type="checkbox"> Large Memory</label>
+      <div class="see-all">See all</div>
+
+      <div class="myfilters">
+
+        <div class="myfilter-group">
+          <h4>Price range <span class="arrow">&#9662;</span></h4>
+        </div>
+
+        <div class="myfilter-group">
+          <h4>Condition <span class="arrow">&#9662;</span></h4>
+        </div>
+
+        <div class="myfilter-group">
+          <h4>Ratings <span class="arrow">&#9662;</span></h4>
+        </div>
+
+        <div class="myfilter-group">
+          <h4>Manufacturer <span class="arrow">&#9662;</span></h4>
+        </div>
+
+      </div>
+
+    </aside>
+
+    <main>
+      <div class="top-bar section-p1">
+        <p>12,911 items in <strong>Mobile accessory</strong></p>
+        <div class="top-bar-right">
+          <label><input type="checkbox"> Verified only</label>
+          <select>
+            <option>Featured</option>
+          </select>
+        </div>
+      </div>
+      <div class="filter-tags">
+        <div class="filter-tag">Samsung <i class="fas fa-times"></i></div>
+        <div class="filter-tag">Apple <i class="fas fa-times"></i></div>
+        <div class="filter-tag">Poco <i class="fas fa-times"></i></div>
+        <div class="filter-tag">Metallic <i class="fas fa-times"></i></div>
+        <div class="filter-tag">3 star <i class="fas fa-times"></i></div>
+        <div class="filter-tag">4 star <i class="fas fa-times"></i></div>
+        <div class="clear-all">Clear all filter</div>
+      </div>
+
+
+
+      <div class="product-grid section-p1">
+
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="mobile.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="mobile2.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="mobile3.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="mobile4.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="Laptops.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="watch.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="mobile2.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="camera.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+        <div class="product-box">
+          <div class="wishlist-icon1"><i class="fa-regular fa-heart"></i></div>
+          <div class="product-img-wrapper">
+            <img src="mobile.png" alt="iPhone 14 Pro">
+          </div>
+          <div class="product-price">
+            <span class="price-current">$950.00</span>
+            <span class="price-old">$1,200.00</span>
+          </div>
+
+          <div class="product-rating">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            <span class="rating-count">7.5</span>
+          </div>
+          <p class="product-description">GoPro HER06 4K Action <br>Camera-Black</p>
+
+        </div>
+
+
+
+      </div>
+
+
+    </main>
+  </div>
+
+  <div class="pagination-bar section-p1">
+    <div class="pagination-controls">
+      <div class="show-wrapper">
+        <span>Show</span>
+        <select>
+          <option selected>10</option>
+          <option>20</option>
+          <option>30</option>
+        </select>
+      </div>
+
+      <div class="pages-wrapper">
+        <button class="nav-btn">&laquo;</button>
+        <button class="page-btn active">1</button>
+        <button class="page-btn">2</button>
+        <button class="page-btn">3</button>
+        <button class="nav-btn">&raquo;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newsletter -->
+  <section class="newsletter ">
+    <h2>Subscribe on our newsletter</h2>
+    <p>Get daily news on upcoming offers from many suppliers all over the world</p>
+    <form id="newsletterForm">
+      <input type="email" id="email" placeholder="Email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+    <div class="message" id="message">Thank you for subscribing!</div>
+  </section>
+
+  <!-- footer -->
+  <footer class="footer section-p1">
+    <div class="footer-top">
+      <div class="brand section-p1">
+        <img src="logo-colored.png" alt="Brand Logo">
+        <p>Best information about the company gies here but now lorem ipsum is</p>
+        <div class="social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin-in"></i>
+        </div>
+      </div>
+
+      <div class="column">
+        <h4>About</h4>
+        <a href="#">About Us</a>
+        <a href="#">Find store</a>
+        <a href="#">Categories</a>
+        <a href="#">Blogs</a>
+      </div>
+
+      <div class="column">
+        <h4>Partnership</h4>
+        <a href="#">About Us</a>
+        <a href="#">Find store</a>
+        <a href="#">Categories</a>
+        <a href="#">Blogs</a>
+      </div>
+
+      <div class="column">
+        <h4>Information</h4>
+        <a href="#">Help Center</a>
+        <a href="#">Money Refund</a>
+        <a href="#">Shipping</a>
+        <a href="#">Contact us</a>
+      </div>
+
+      <div class="column">
+        <h4>For users</h4>
+        <a href="#">Login</a>
+        <a href="#">Register</a>
+        <a href="#">Settings</a>
+        <a href="#">My Orders</a>
+      </div>
+
+      <div class="column get-app">
+        <h4>Get app</h4>
+        <img src="Group.png" alt="">
+        <img src="market-button.png" alt="">
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2023 Ecommerce.</div>
+      <div class="language-select">
+        <img src="https://flagcdn.com/w40/us.png" alt="English">
+        English
+        <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src="script.js"></script>
+
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // ✅ MOBILE SIDEBAR TOGGLE
+    const toggleBtn = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('close-btn');
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+
+    if (toggleBtn && sidebar && overlay && closeBtn) {
+      toggleBtn.addEventListener('click', () => {
+        sidebar.classList.add('active');
+        overlay.classList.add('active');
+        toggleBtn.style.display = 'none';
+      });
+
+      const closeSidebar = () => {
+        sidebar.classList.remove('active');
+        overlay.classList.remove('active');
+        toggleBtn.style.display = 'block';
+      };
+
+      closeBtn.addEventListener('click', closeSidebar);
+      overlay.addEventListener('click', closeSidebar);
+    }
+
+    // ✅ CLEAR ALL FILTERS
+    const clearBtn = document.querySelector(".clear-all");
+    if (clearBtn) {
+      clearBtn.addEventListener("click", function () {
+        document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+          cb.checked = false;
+        });
+
+        document.querySelectorAll(".filter-tag").forEach(tag => {
+          tag.remove();
+        });
+
+        console.log("All filters cleared!");
+      });
+    }
+
+    // ✅ REMOVE INDIVIDUAL FILTER TAG
+    document.querySelectorAll(".filter-tag i").forEach(closeIcon => {
+      closeIcon.addEventListener("click", function () {
+        const tag = this.parentElement;
+        tag.remove();
+      });
+    });
+
+    // ✅ WISHLIST ICON TOGGLE 1
+    document.querySelectorAll(".wishlist-icon1 i").forEach(icon => {
+      icon.addEventListener("click", function () {
+        icon.classList.toggle("fa-solid");
+        icon.classList.toggle("fa-regular");
+        icon.style.color = "#0D6EFD";
+      });
+    });
+
+    // ✅ NEWSLETTER FORM
+    const newsletterForm = document.getElementById("newsletterForm");
+    const emailInput = document.getElementById("email");
+    const message = document.getElementById("message");
+
+    if (newsletterForm) {
+      newsletterForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        if (emailInput.value.trim() === "" || !emailInput.value.includes("@")) {
+          message.style.color = "red";
+          message.textContent = "Please enter a valid email address.";
+          message.style.display = "block";
+          return;
+        }
+
+        message.style.color = "black";
+        message.textContent = "Thank you for subscribing!";
+        message.style.display = "block";
+        emailInput.value = "";
+        setTimeout(() => {
+          message.style.display = "none";
+        }, 3000);
+      });
+    }
+  });
+</script>

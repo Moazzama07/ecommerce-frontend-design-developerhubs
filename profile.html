@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f2f4f8;
+      padding: 50px 20px;
+    }
+
+    .profile-container {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 40px;
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 20px;
+    }
+
+    .profile-header img {
+      width: 100px;
+      border-radius: 50%;
+      margin-right: 30px;
+    }
+
+    .profile-header h2 {
+      color: #1c62b9;
+    }
+
+    .profile-info {
+      margin-top: 30px;
+    }
+
+    .info-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .info-row i {
+      color: #00b517;
+      width: 30px;
+    }
+
+    .info-row span {
+      font-weight: 600;
+      width: 120px;
+    }
+
+    .info-row p, .info-row input {
+      margin-left: 10px;
+      border: none;
+      background: transparent;
+      font-size: 15px;
+    }
+
+    .info-row input {
+      border-bottom: 1px solid #ccc;
+      padding: 2px 4px;
+    }
+
+    .profile-actions {
+      margin-top: 30px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .profile-actions button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .btn-primary {
+      background: #1c62b9;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #134b8c;
+    }
+
+    .btn-secondary {
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    .btn-secondary:hover {
+      background: #ddd;
+    }
+
+    @media (max-width: 600px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .profile-header img {
+        margin-bottom: 20px;
+      }
+
+      .info-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .info-row span {
+        margin-bottom: 5px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="profile-container">
+    <div class="profile-header">
+      <img src="Avatar.png" alt="User Profile">
+      <div>
+        <h2 id="userName">John Doe</h2>
+        <p>Member since Jan 2024</p>
+      </div>
+    </div>
+
+    <div class="profile-info">
+      <div class="info-row"><i class="fa-solid fa-envelope"></i> <span>Email:</span><p id="emailText">john.doe@email.com</p></div>
+      <div class="info-row"><i class="fa-solid fa-phone"></i> <span>Phone:</span><p id="phoneText">+92 300 1234567</p></div>
+      <div class="info-row"><i class="fa-solid fa-location-dot"></i> <span>Location:</span><p id="locationText">Lahore, Pakistan</p></div>
+      <div class="info-row"><i class="fa-solid fa-cart-shopping"></i> <span>Total Orders:</span><p>8 Orders</p></div>
+    </div>
+
+    <div class="profile-actions">
+      <button class="btn-primary" id="editBtn"><i class="fa-solid fa-user-pen"></i> Edit Profile</button>
+      <button class="btn-secondary"><i class="fa-solid fa-box"></i> View Orders</button>
+      <button class="btn-secondary"><i class="fa-solid fa-gear"></i> Settings</button>
+      <button class="btn-secondary" id="logoutBtn"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</button>
+    </div>
+  </div>
+
+  <script>
+    // Load saved data
+    window.addEventListener("DOMContentLoaded", () => {
+      const savedName = localStorage.getItem("userName");
+      const savedEmail = localStorage.getItem("userEmail");
+
+      if (savedName) document.getElementById("userName").textContent = savedName;
+      if (savedEmail) document.getElementById("emailText").textContent = savedEmail;
+    });
+
+    const editBtn = document.getElementById("editBtn");
+    let isEditing = false;
+
+    editBtn.addEventListener("click", () => {
+      const nameEl = document.getElementById("userName");
+      const emailEl = document.getElementById("emailText");
+      const phoneEl = document.getElementById("phoneText");
+      const locationEl = document.getElementById("locationText");
+
+      if (!isEditing) {
+        // Turn into inputs
+        nameEl.innerHTML = `<input type="text" value="${nameEl.textContent}" id="editName"/>`;
+        emailEl.innerHTML = `<input type="email" value="${emailEl.textContent}" id="editEmail"/>`;
+        phoneEl.innerHTML = `<input type="text" value="${phoneEl.textContent}" id="editPhone"/>`;
+        locationEl.innerHTML = `<input type="text" value="${locationEl.textContent}" id="editLocation"/>`;
+        editBtn.textContent = "Save";
+        isEditing = true;
+      } else {
+        // Save values
+        const newName = document.getElementById("editName").value;
+        const newEmail = document.getElementById("editEmail").value;
+        const newPhone = document.getElementById("editPhone").value;
+        const newLocation = document.getElementById("editLocation").value;
+
+        // Update UI
+        nameEl.textContent = newName;
+        emailEl.textContent = newEmail;
+        phoneEl.textContent = newPhone;
+        locationEl.textContent = newLocation;
+
+        // Save to localStorage
+        localStorage.setItem("userName", newName);
+        localStorage.setItem("userEmail", newEmail);
+
+        editBtn.textContent = "Edit Profile";
+        isEditing = false;
+      }
+    });
+
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      const confirmLogout = confirm("Are you sure you want to log out?");
+      if (confirmLogout) {
+        localStorage.clear();
+        window.location.href = "index.html";
+      }
+    });
+  </script>
+</body>
+</html>
